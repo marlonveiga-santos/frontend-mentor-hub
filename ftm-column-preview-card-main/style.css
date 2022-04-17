@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: "Lexend Deca", sans-serif;
+  --secondary-font: "Big Shoulders Display", cursive;
+  --rem-size: 15px;
+  --primary-bright: hsl(31, 77%, 52%);
+  --primary-dark: hsl(184, 100%, 22%);
+  --primary-darker: hsl(179, 100%, 13%);
+  --neutral-transparent: hsla(0, 0%, 100%, 0.75);
+  --neutral-light: hsl(0, 0%, 95%);
+}
+
+html {
+  font-family: var(--primary-font);
+  font-size: var(--rem-size);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: var(--neutral-light);
+  position: relative;
+}
+
+main > .card-grid {
+  display: grid;
+  grid-template-areas:
+    "card-1"
+    "card-2"
+    "card-3";
+  width: 325px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.title-head {
+  width: 0;
+  height: 0;
+}
+
+.card-grid .card-item {
+  padding: 50px;
+  height: 440px;
+}
+
+.card-grid .card-item:nth-child(1) {
+  background-color: var(--primary-bright);
+}
+.card-grid .card-item:nth-child(2) {
+  background-color: var(--primary-dark);
+}
+.card-grid .card-item:nth-child(3) {
+  background-color: var(--primary-darker);
+}
+
+.card-item h2 {
+  font-family: var(--secondary-font);
+  font-size: 2.6rem;
+  font-weight: 700;
+  padding: 28px 0;
+  color: var(--neutral-light);
+  text-transform: uppercase;
+}
+
+.card-item p {
+  color: var(--neutral-transparent);
+  line-height: 1.7;
+}
+
+.card-item button {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 40px;
+  background-color: var(--neutral-light);
+  margin-top: 32px;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+
+.card-grid .card-item:nth-child(1) button {
+  color: var(--primary-bright);
+}
+.card-grid .card-item:nth-child(2) button {
+  color: var(--primary-dark);
+}
+.card-grid .card-item:nth-child(3) button {
+  color: var(--primary-darker);
+}
+
+.card-grid .card-item:nth-child(1) button:hover {
+  color: var(--neutral-light);
+  background-color: transparent;
+  border: 2px solid var(--neutral-light);
+}
+.card-grid .card-item:nth-child(2) button:hover {
+  color: var(--neutral-light);
+  background-color: transparent;
+  border: 2px solid var(--neutral-light);
+}
+.card-grid .card-item:nth-child(3) button:hover {
+  color: var(--neutral-light);
+  background-color: transparent;
+  border: 2px solid var(--neutral-light);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 2%;
+}
+
+@media screen and (min-width: 1440px) {
+  main > .card-grid {
+    display: grid;
+    grid-template-areas: "card-1 card-2 card-3";
+    width: 920px;
+  }
+
+  .card-grid .card-item {
+    height: 500px;
+    padding: 48px;
+  }
+
+  .card-item button {
+    margin-top: 80px;
+  }
+
+  .attribution {
+    position: fixed;
+    bottom: 2%;
+  }
+}

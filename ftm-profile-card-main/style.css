@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-light: hsl(185, 75%, 39%);
+  --primary-dark: hsl(229, 23%, 23%);
+  --secondary-light: hsl(0, 0%, 59%);
+  --secondary-dark: hsl(227, 10%, 46%);
+}
+
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+}
+
+main {
+  background:url("../ftm-profile-card-main/images/bg-pattern-top.svg") no-repeat, url("../ftm-profile-card-main/images/bg-pattern-bottom.svg") no-repeat;
+  background-size: cover,cover;
+  background-position: right 50vw bottom 40vh, left 50vw top 50vh;
+}
+
+.main-title {
+  height:0;
+  width:0
+}
+
+#screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--primary-light);
+  overflow: hidden;
+}
+
+.circle-top {
+  position: absolute;
+  top: -450px;
+  left: -300px;
+}
+
+.circle-bottom {
+  position: absolute;
+  bottom: -400px;
+  right: -300px;
+}
+
+.card {
+  z-index: 10;
+  background-color: white;
+  border-radius: 1rem;
+  height: 370px;
+  width: 350px;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: var(--secondary-dark);
+  overflow: hidden;
+}
+
+.card-hero {
+  height: 140px;
+  background-image: url("images/bg-pattern-card.svg");
+}
+
+.card-main {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  transform: translateY(-30%);
+  margin-bottom: -25px;
+}
+
+.card-main-avatar {
+  flex-basis: 100%;
+}
+
+.card-main-avatar img {
+  height: 105px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin: 0 122.5px;
+}
+
+.card-main-name {
+  color: var(--primary-dark);
+  margin-right: 12px;
+}
+
+.card-main-city {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--secondary-light);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.card-footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-footer p:nth-child(1) {
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.card-footer p:nth-child(2) {
+  font-size: 0.8rem;
+}
+
+.attribution {
+  color: var(--primary-dark);
+  margin-top: 5rem;
+}
+.attribution {
+  position: fixed;
+  bottom: 2%;
+}
+
+.attribution a {
+  color: white;
+  text-decoration: none;
+}
+
+.attribution a:visited {
+  color: var(--secondary-dark);
+}
+
+@media screen and (max-height:710px) {
+  .attribution {
+    display:none;
+  }
+}

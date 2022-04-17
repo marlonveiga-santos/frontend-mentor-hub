@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-pale: hsl(225, 100%, 94%);
+  --primary-bright: hsl(245, 75%, 52%);
+  --neutral-pale: hsl(225, 100%, 98%);
+  --neutral-desaturated: hsl(224, 23%, 55%);
+  --neutral-dark: hsl(223, 47%, 23%);
+}
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("images/pattern-background-desktop.svg") no-repeat
+    var(--primary-pale);
+}
+
+.card {
+  height: 700px;
+  width: 450px;
+  color: var(--neutral-desaturated);
+  line-height: 1.5;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:  0px 8px 32px 0px  var(--neutral-desaturated);
+}
+
+.card-hero {
+  height: 220px;
+  background-image: url("images/illustration-hero.svg");
+  background-size: cover;
+  margin-bottom: 38px;
+}
+
+.card-title {
+  text-align: center;
+  color: var(--neutral-dark);
+  font-size: 1.75rem;
+  letter-spacing: 0.02rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.card-description {
+  text-align: center;
+  font-size: 1.05rem;
+  letter-spacing: 0.02rem;
+  padding: 0 60px;
+}
+
+.card-offer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  height: 90px;
+  width: 350px;
+  margin: 28px 50px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: var(--neutral-pale);
+}
+
+.card-offer a,
+.card-offer a:visited {
+  color: var(--primary-bright);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-underline-offset: 0.11rem;
+  width: 40%;
+  text-align: right;
+}
+
+.card-offer a:hover {
+  text-decoration: none;
+  color: hsl(245, 83%, 68%);
+}
+
+.card-offer-main h3 {
+  color: var(--neutral-dark);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.card button {
+  font-size: 1rem;
+  font-weight: 900;
+  width: 350px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 18px 0;
+  border: none;
+  border-radius: 12px;
+}
+
+.button-cta {
+  color: white;
+  background-color: var(--primary-bright);
+  margin-bottom: 25px;
+  box-shadow:  0px 8px 32px 0px  var(--neutral-desaturated);
+}
+
+.button-cta:hover {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.button-regret {
+  color: var(--neutral-desaturated);
+  background-color: white;
+  margin-bottom: 25px;
+}
+
+.button-regret:hover {
+  color: var(--neutral-dark);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 2%;
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 18px;
+  }
+  .content {
+    background: url("images/pattern-background-mobile.svg") no-repeat
+      var(--primary-pale);
+  }
+
+  .card {
+    transform: scale(0.75);
+  }
+
+  .card-offer a,
+  .card-offer a:visited {
+    width: 30%;
+  }
+
+  .attribution {
+    font-size: 0.7rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-height:800px) {
+  .attribution {
+    display: none;
+  }
+}
